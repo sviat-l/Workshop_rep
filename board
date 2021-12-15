@@ -1,10 +1,5 @@
 
 import itertools
-boardd = []
-for i in range(8):
-    boardd.append([])
-    for j in range(8):
-        boardd[-1].append(" ")
 def draw_board(board):
     board = list(itertools.chain.from_iterable(board))
     print("---------------------------------")
@@ -31,7 +26,3 @@ def make_move(move,board,attacked):
     if board[move[0]][move[1]]==' ':
         print("You missed")
         attacked[move[0]][move[1]]='.'
-    
-print(draw_board(boardd))
-
-
