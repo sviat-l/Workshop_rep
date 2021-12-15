@@ -34,3 +34,4 @@ def make_move(move,board,attacked):
     
 print(draw_board(boardd))
 
+
