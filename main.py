@@ -8,14 +8,21 @@ def is_alive(board,attacked):
     return alive
 
 def output_field():
-    pass
+    for i in range(2):
+        board = list(itertools.chain.from_iterable(board))
+    print("---------------------------------")
+    for i in range(8):
+        print("|", board[0 + i * 8], "|", board[1 + i * 8], "|", board[2 + i * 8],\
+             "|", board[3 + i * 8], "|", board[4 + i * 8],"|", board[5 + i * 8],"|",\
+                  board[6 + i * 8],"|", board[7 + i * 8], "|")
+        print("---------------------------------")
 
 def input_move(attacked1,board1):
     output_field(attacked1)
     move=input('Your move:')
     coor1=ord(move[0])-ord('a')
     coor2=int(move[1])-1
-    while attacked1[coor1][coor2] in ['*','x']:
+    while attacked1[coor1][coor2] in ['.','x']:
         move=input('Wrong move. Your move:')
         coor1=ord(move[0])-ord('a')
         coor2=int(move[1])-1
