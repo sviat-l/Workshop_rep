@@ -18,7 +18,7 @@ def intro():
 | h |   |   |   |   |   |   |   |\n\
 ---------------------------------")
 
-def draw_board():
+def draw_board(board):
     for i in range(2):
         board = list(itertools.chain.from_iterable(board))
     print("---------------------------------")
