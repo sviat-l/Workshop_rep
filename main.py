@@ -23,7 +23,7 @@ def input_move(attacked1,board1):
 
 def make_move(move,board,attacked):
     if board[move[0]][move[1]]=='X':
-        bool1=True
+        bool1 = True
         for j1 in range(-1,2,2):
             for j2 in range(-1,2,2):
                 if attacked[move[0]+j1][move[1]+j2]==' ' and board[move[0]+j1][move[1]+j2]=='X':
