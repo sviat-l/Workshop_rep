@@ -57,6 +57,7 @@ board2=player_input_board()
 attacked1=generate_empty_board()
 attacked2=generate_empty_board()
 def main()
+    intro()
     k=1
 
     while is_alive(board1,attacked1) and is_alive(board2,attacked2):
